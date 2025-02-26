@@ -24,7 +24,9 @@ const app=express();
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://referral-manager.netlify.app' // Replace with your frontend URL
+  }));
 
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

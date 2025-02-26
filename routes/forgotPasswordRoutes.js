@@ -40,7 +40,7 @@ router.post("/forgot-password", async (req, res) => {
     await passwordReset.save();
 
     // Send the reset email
-    const resetUrl = `http://localhost:3000/reset/${resetToken}`;
+    const resetUrl = `https://referral-manager.netlify.app/reset/${resetToken}`;
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_USER,
